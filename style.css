@@ -1,299 +1,325 @@
-p img, li img, h1 img, h2 img, h3 img, h4 img {
-	max-height: 1em;
-	max-width: 1em;
-	vertical-align: middle ;
+
+/* $OpenBSD: openbsd.css,v 1.20 2019/12/30 04:54:31 bentley Exp $ */
+
+:root {
+	--red:   #E00000;
+	--green: #008100;
+	--blue:  #0000E0;
+	--buildhead: #E0E0E0;
 }
 
-sup { vertical-align: top; font-size: 0.6em; }
-
-nav,footer {
-    text-align: center ;
-    font-variant: small-caps ;
-    clear: both ;
+:link {
+	color: #23238E;
 }
 
-nav { font-size: small ;}
-
-footer { font-size: large ; }
-
-nav li,footer li {
-	display: inline-block ;
-	list-style: none ;
-	background: rgba(0,0,0,.3) ;
-	border-radius: 10px ;
-	padding: .5em ;
-	max-width: 7em ;
-}
-
-nav ul, footer ul, #taglist {
-	padding: 0;
-}
-
-nav a li:hover, footer a li:hover {
-	background: goldenrod ;
-	color: black ;
-}
-
-main {
-	margin: auto ;
-	color: #ddd ;
-	background: rgba(0,0,0,.3) ;
-	padding: 20px ;
-	border-radius: 50px ;
-}
-
-strong { color: white ; }
-
-a strong { color: lime ; }
-
-details { padding-left: 20px ; text-decoration: underline; }
-
-pre {
-	background: #222 ;
-	border: 1px solid lime ;
-	border-radius: 20px ;
-	padding: 1em ;
-	margin: 1em ;
-	white-space: pre-wrap;
-}
-
-code {
-	background: #222 ;
-	color: lime ;
-	border-radius: 5px ;
-	overflow-wrap: break-word ;
-}
-
-.cryptocontainer {
-    display: flex ;
-    flex-wrap: wrap ;
-    justify-content: center ;
-}
-.cryptoinfo {
-    max-width: 350px ;
-    text-align: center ;
-    padding-left: 10px ;
-    padding-right: 10px ;
-}
-.cryptoinfo code {
-	font-size: small ;
-	overflow-wrap: break-word ;
-}
-ul {
-	margin-left: 20px ;
-	margin-right: 20px ;
-}
-
-li img, p img {
-	max-height: 1em ;
-	max-width: 1em ;
+:visited {
+	color: #008088;
 }
 
 body {
-    font-style: sans-serif ;
-	padding-top: 10px;
-	background: black ;
-	/* background: linear-gradient(darkslategray, black) no-repeat fixed ; */
-	/* margin-bottom: 500px; */
+	background-color: #FFFFFF;
+	color: #111111;
+	margin: 15px auto;
+	padding: 0 10px;
 }
 
-h1,h2,h3,h4 { text-align: center ; }
-
-h1 { color: lightblue ; }
-
-h2 { color: goldenrod ; }
-
-h3 { color: tomato ; }
-
-h4 { color: deepskyblue ; }
-
-a { color: turquoise ; text-decoration: none ;}
-
-a:hover { color: greenyellow ;}
-.new a:hover { color: greenyellow ; }
-
-
-dt { font-weight: bold ; color: lightgray ; }
-
-.resright, .resmid {
-	display: block ;
-	margin: auto ;
-	max-width: 90% ;
-	max-height: 300px ;
+code {
+	white-space: nowrap;
 }
 
-.disappear {
-	display: none ;
+@media (min-width: 800px) {
+	body {
+		max-width: 85%;
+	}
 }
 
-.titleimg {
-	display: block ;
-	margin: auto ;
-	max-width: 90% ;
-	max-height: 400px ;
+tt {
+	white-space: pre;
 }
 
-.lol {
-	padding: .25em ;
+.cmdbox {
+	background: #F5F5F5;
+	border: 1px solid #AAAAAA;
+	overflow: auto;
+	padding: 10px;
 }
 
-.lol ul {
+#OpenBSD {
+	color: #E00000;
+}
+
+#OpenBSD :link i, #OpenBSD :visited i {
+	color: #0000FF;
+}
+
+#OpenBSD :link b, #OpenBSD :visited b {
+	color: #000084;
+}
+
+#OpenBSD small {
+	font-weight: normal;
+	float: right;
+}
+
+/* sidebar layout */
+
+#project-main body {
+	height: 100%;
+	max-width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	display: table;
+	padding: 0;
 	margin: 0;
-	list-style: none;
+}
+
+#project-main nav,
+#project-main article,
+#project-main figure,
+#project-main aside {
+	display: table-cell;
+	padding: 4px;
+}
+
+#project-main nav,
+#project-main figure {
+	border-right: 11px solid;
+	background-color: #6BBDD6;
+	border-color: #007B9C;
+}
+
+#project-main nav header {
+	margin: 0;
+	font-size: 15pt;
+	font-weight: bolder;
+	white-space: nowrap;
+}
+
+#project-main nav ul {
+	margin-top: 0;
+	margin-bottom: 1em;
+	padding-left: 0;
+}
+
+#project-main nav li {
+	list-style-type: none;
+	list-style-position: inside;
+	margin-left: 0.5em;
+}
+
+#project-main article h2 {
+	margin: 0;
+	text-align: center;
+}
+
+#callout {
+	color: #E00000;
+	font-weight: bold;
+	text-align: center;
+}
+
+.not-openbsd #callout {
+	color: #0000A0;
+	font-weight: normal;
+}
+
+#project-main main,
+#project-main footer {
+	display: table-row;
+}
+
+#project-main nav {
+	vertical-align: top;
+}
+
+#project-main figure,
+#project-main aside {
+	vertical-align: bottom;
+}
+
+/* errataXX.html */
+
+#errata strong {
+	color: var(--green);
+}
+
+/* XX.html */
+
+#release #OpenBSD + table {
+	border-spacing: 0;
+	margin-bottom: 1.5em;
+}
+
+#release #OpenBSD + table td {
+	vertical-align: top;
+}
+
+#release #OpenBSD + table > tbody > tr > td {
+	padding-left: 1.4em;
+}
+
+#release #OpenBSD + table ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#release #OpenBSD + table ul li {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#release cite.isbn {
+	color: var(--red);
+	font-style: normal;
+}
+
+#release code.reldir {
+	color: var(--red);
+	font-family: serif;
+}
+
+#release table.signify {
+	font-family: monospace;
+}
+
+#release table.signify td {
 	padding: 0;
 }
 
-/* .lol li { */
-/* 	padding: 1px ; */
-/* } */
+#release h3 {
+	color: var(--blue);
+}
 
-@media (min-width: 55em) {
+#release #quickinstall h3 {
+	color: var(--red);
+}
 
-    /* nav { */
-    /*     position: fixed; */
-    /* } */
-    /* nav li { */
-    /*     display: block ; */
-    /*     margin: 10px ; */
-    /* } */
+#release kbd {
+	font-weight: bolder;
+}
 
-	.lol { display: inline-block; vertical-align: top ; }
+#release #new li p {
+	margin-bottom: 0;
+}
 
-	.resright, .disappear {
-		display: block ;
-		float: right;
-		padding: 20px ;
-		clear: both ;
-		max-height: 300px ;
-		max-width: 300px ;
+#release #new li p + p {
+	margin-top: 0;
+}
+
+#release #new li + li {
+	margin-top: 1em;
+}
+
+#release #new li li + li {
+	margin-top: 0;
+}
+
+#release #new li li ul {
+	margin-bottom: 0;
+}
+
+#release #quickinstall p:first-child {
+	margin-left: 0;
+}
+
+#release #quickinstall p {
+	margin-left: 2.5em;
+}
+
+#release #quickinstall blockquote {
+	margin-left: 4.5em;
+}
+
+/* platform pages */
+
+#platform #OpenBSD + hr + table {
+	margin-bottom: 0;
+}
+#platform #OpenBSD + hr + table tr {
+	margin-left: 0;
+}
+
+#platform #OpenBSD + hr + table td {
+	vertical-align: top;
+	padding-left: 0;
+	padding-bottom: 0;
+}
+
+#platform #OpenBSD + hr + table p {
+	margin-top: 0;
+}
+
+#platform #OpenBSD + hr + table p:last-child {
+	margin-bottom: 0;
+}
+
+#platform h3 {
+	color: var(--blue);
+}
+
+/* redefine colors for dark mode */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--red:   #E05434;
+		--green: #20B700;
+		--blue:  #A7C1E5;
+		--buildhead: #474749;
 	}
 
-	.resmid {
-		max-height: 300px ;
-		max-width: 300px ;
+	:link {
+		color: #BAD7FF;
 	}
 
-	main { max-width: 900px ; }
-
-	.column {
-		float: left;
-		width: 50% ;
+	:visited {
+		color: #F6BAFF;
 	}
 
+	body {
+		background-color: #1E1F21;
+		color: #EEEFF1;
+	}
+
+	.cmdbox {
+		background: #000000;
+		color: #FFFFFFF;
+	}
+
+	#OpenBSD :link {
+		text-decoration-color: #CF4229;
+	}
+
+	#OpenBSD :link i, #OpenBSD :visited i {
+		color: #F2CA30;
+	}
+
+	#OpenBSD :link b, #OpenBSD :visited b {
+		color: #CF4229;
+	}
+
+	#OpenBSD {
+		color: #EEEFF1;
+	}
+
+	#faq #OpenBSD small :link {
+		text-decoration-color: #BAD7FF;
+	}
+
+	#project-main nav,
+	#project-main figure {
+		background-color: #202F51;
+		border-color: #97BADB;
+	}
+
+	#callout {
+		color: #E05434;
+	}
+
+	.not-openbsd #callout {
+		color: #E05434;
+	}
 }
 
-/* footer { */
-/* 	font-size: large ; */
-/* 	margin: auto ; */
-/* 	max-width: 500px ; */
-/* } */
-
-.entry p, .entry li { margin-left: 2em ; }
-
-figure img { max-width: 100% ; margin: auto ; }
-
-figcaption { font-style: italic ; font-size: small ; }
-
-figure { text-align: center; }
-
-#toc {
-	font-size: x-large ;
-	margin-left: auto ;
-	margin-right: auto ;
-	max-width: 500px ;
-
-}
-
-#toc li { padding: 5px }
-
-.new::after {
-	content: " ðŸ†•" ;
-	/* content: " (New ðŸŽ)" ; */
-	color: goldenrod ;
-}
-
-.i a { color: green ;}
-.d a { color: red ;}
-
-/* For QR codes for bitcoin and crypto */
-.qr { max-width: 150px ; padding: 10px }
-
-.entryinfo {
-	text-align: center ;
-	font-size: x-small ;
-	margin: 0 ;
-}
-
-#mainmenu {
-	font-size: large ;
-}
-
-#tagcloud {
-	padding: 0;
-	font-size: small ;
-	font-variant: small-caps ;
-	background: midnightblue ;
-	border-radius: 10px ;
-	text-align: center ;
-	margin: 0 ;
-}
-
-#tagcloud li {
-	display: inline-block ;
-	padding: 0.4em ;
-	margin: 0.4em ;
-	width: auto ;
-	background: darkturquoise ;
-	border-radius: 10px ;
-}
-
-#tagcloud li:hover {
-	background: white ;
-}
-
-#tagcloud a { color: black ; }
-
-#taglist {
-	max-width: 300px ;
-	margin: auto ;
-	text-align: center ;
-	display: block ;
-}
-
-#taglist li {
-	display: inline-block ;
-	padding-right: 0.5em ;
-	padding-left: 0.5em ;
-}
-
-#taglist::before { content: "This article is tagged as:" ; display: block; font-size: small ; }
-
-#taglist::after { content: "Click the links above for related articles." ; display: block ;  font-size: small ;}
-
-#mainmenu dd {
-  display: inline;
-  margin: 0;
-}
-#mainmenu dd:after{
-  display: block;
-  content: '';
-}
-#mainmenu dt{
-  display: inline-block;
-  min-width: 100px;
-}
-
-aside {
-	font-style: italic ;
-	font-size: small ;
-	color: lightgray ;
-	margin-left: 3em ;
-	margin-right: 3em ;
-	padding: 0 1em 0 1em ;
-	border: 1px solid black ;
-	border-radius: 20px ;
-}
-
-blockquote {
-	text-align: center ;
-}
