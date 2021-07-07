@@ -1,6 +1,3 @@
-
-/* $OpenBSD: openbsd.css,v 1.20 2019/12/30 04:54:31 bentley Exp $ */
-
 :root {
 	--red:   #E00000;
 	--green: #008100;
@@ -322,4 +319,3 @@ tt {
 		color: #E05434;
 	}
 }
-
