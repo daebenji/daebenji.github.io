@@ -1,14 +1,62 @@
-body, td, p, pre, textarea, input, form, h1, h2, h3 { font-family: Monaco, monospace; }
-body { max-width: 80ex; margin: 0; padding: 5px; }
-@media (prefers-color-scheme: dark) {
-  body { background-color: #17181C; color: #E8E8E8; }
-  a { color: #f90; text-decoration: none; }
-  a:active { color: #f93; }
-  a:visited { color: #fc0; }
+/* Base font styling */
+body, td, p, pre, textarea, input, form, h1, h2, h3 {
+  font-family: Monaco, monospace;
 }
+
+/* Responsive container */
+body {
+  max-width: 80ch;         /* Use ch instead of ex for better readability */
+  margin: 0 auto;          /* Center content */
+  padding: 1rem;           /* More comfortable padding for all devices */
+  line-height: 1.5;        /* Better readability */
+  font-size: 16px;
+}
+
+/* Ensure pre content wraps and scrolls cleanly */
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+}
+
+/* Responsive typography scaling on small devices */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    padding: 0.75rem;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #17181C;
+    color: #E8E8E8;
+  }
+  a {
+    color: #f90;
+    text-decoration: none;
+  }
+  a:active {
+    color: #f93;
+  }
+  a:visited {
+    color: #fc0;
+  }
+}
+
+/* Light mode */
 @media (prefers-color-scheme: light) {
-  body { background-color: #E8E8E8; color: #17181C; }
-  a { color: #03678D; text-decoration: none; }
-  a:active { color: #03678D; }
-  a:visited { color: #03678D; }
+  body {
+    background-color: #E8E8E8;
+    color: #17181C;
+  }
+  a {
+    color: #03678D;
+    text-decoration: none;
+  }
+  a:active,
+  a:visited {
+    color: #03678D;
+  }
 }
