@@ -155,3 +155,13 @@ pre code.language-markdown {
   color: #E8E8E8; /* Light font on dark background */
 }
 
+pre code.language-bash {
+  background: #17181C;
+  border: 1px solid #ddd;
+  display: block;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #E8E8E8; /* Light font on dark background */
+}
+
