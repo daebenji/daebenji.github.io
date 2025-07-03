@@ -5,51 +5,55 @@
   <title>First Post - Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Prism.js CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <!-- Prism dark theme -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 
   <!-- Prism.js Core and Language Support -->
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
 
-  <!-- Default stylesheet -->
   <link rel="stylesheet" href="/ugly.css">
 
   <style>
     body {
       font-family: 'Fira Code', monospace;
       background: #17181C;
+      color: #f8f8f2;
       padding: 2rem;
     }
     pre {
-      background: #17181C;
+      background: #1e1e1e;
       padding: 1rem;
+      border-radius: 6px;
       overflow-x: auto;
+    }
+    a {
+      color: #cc99ff;
     }
   </style>
 </head>
 <body>
+
   <p><a href="/">Home</a></p>
 
-        <pre>
-            # TEST
-            ------
+  <pre>
+# TEST
+------
 
-            Here comes my intro text.
+Here comes my intro text.
 
-            # Test Headline 1
-            # Test Headline 2
-            ## Test Sub Headline 1
+# Test Headline 1
+# Test Headline 2
+## Test Sub Headline 1
+  </pre>
 
-        </pre>
+  <h2>Example: Bash Highlighting</h2>
 
-        <h2>Example: Bash Highlighting</h2>
-
-        <pre><code class="language-bash">
-            #!/bin/bash
-            echo "Hello, syntax highlighting!"
-            docker ps | grep web
-        </code></pre>
+  <pre><code class="language-bash">#!/bin/bash
+echo "Hello, syntax highlighting!"
+docker ps | grep web
+</code></pre>
 
 </body>
 </html>
+
