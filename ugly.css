@@ -152,4 +152,6 @@ pre code.language-markdown {
   padding: 1rem;
   border-radius: 6px;
   font-size: 0.9rem;
+  color: #E8E8E8; /* Light font on dark background */
 }
+
