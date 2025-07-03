@@ -145,7 +145,8 @@ pre[class*="language-"] {
   font-style: italic;
 }
 pre code.language-markdown {
-  background: #qdf6e3;
+/*  background: #qdf6e3; */
+  background: #17181C;
   border: 1px solid #ddd;
   display: block;
   padding: 1rem;
