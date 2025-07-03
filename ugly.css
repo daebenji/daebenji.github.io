@@ -323,20 +323,3 @@ tt {
 		color: #E05434;
 	}
 }
-
-pre code.language-markdown {
-/*  background: #qdf6e3; */
-  background: #17181C;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #E8E8E8; /* Light font on dark background */
-}
-
-pre code.language-bash {
-  background: #17181C;
-  display: block;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #E8E8E8; /* Light font on dark background */
-}
-
